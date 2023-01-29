@@ -17,6 +17,7 @@ class CreateEscuderiaFragment : Fragment(R.layout.fragment_create_escuderia) {
         val binding = FragmentCreateEscuderiaBinding.bind(view)
 
         binding.buttonCrearEscuderias.setOnClickListener {
+            //añadir escuderias
             val nombre = Escuderias(binding.nombreEscuderia.text.toString())
             /*val textoCarrera = Escuderias(binding.carreraEscuderia.text.toString())
             val carrera=Integer.parseInt(textoCarrera.toString());
