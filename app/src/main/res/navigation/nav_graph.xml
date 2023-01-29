@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.ivanvegagonzalez.campeoanto.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_createEscuderiaFragment"
+            app:destination="@id/createEscuderiaFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_pilotoFragment"
+            app:destination="@id/pilotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.ivanvegagonzalez.campeoanto.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEscuderiaFragment"
+        android:name="com.ivanvegagonzalez.campeoanto.ui.create.CreateEscuderiaFragment"
+        android:label="fragment_create_escuderia"
+        tools:layout="@layout/fragment_create_escuderia">
+        <action
+            android:id="@+id/action_createEscuderiaFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pilotoFragment"
+        android:name="com.ivanvegagonzalez.campeoanto.ui.main.PilotoFragment"
+        android:label="fragment_piloto"
+        tools:layout="@layout/fragment_piloto" />
+</navigation>

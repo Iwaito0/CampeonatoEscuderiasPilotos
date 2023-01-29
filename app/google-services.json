@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "870753527987",
+    "project_id": "fir-clase-77b0b",
+    "storage_bucket": "fir-clase-77b0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870753527987:android:ef0d85abec84257a8b28c6",
+        "android_client_info": {
+          "package_name": "com.ivanvegagonzalez.campeoanto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870753527987-8ajs4m4r1jqha9744jacf9slpou35v30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo8URMW3tm3PgX9qVpHdz4Sm_cMMXc4yU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870753527987-8ajs4m4r1jqha9744jacf9slpou35v30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870753527987:android:deb05003c401a5818b28c6",
+        "android_client_info": {
+          "package_name": "com.ivanvegagonzalez.campeonato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870753527987-rmdu59cp42tf4g4e3k86b270f28cfq8a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ivanvegagonzalez.campeonato",
+            "certificate_hash": "8ef5a4b86f5ef2bc45acc83de0e5a798df545092"
+          }
+        },
+        {
+          "client_id": "870753527987-8ajs4m4r1jqha9744jacf9slpou35v30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo8URMW3tm3PgX9qVpHdz4Sm_cMMXc4yU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870753527987-8ajs4m4r1jqha9744jacf9slpou35v30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870753527987:android:e8e8122076b306a58b28c6",
+        "android_client_info": {
+          "package_name": "com.ivanvegagonzalez.myapplication2frag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870753527987-66mingc6kvtm24cjjo9pi9o78srlaed4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ivanvegagonzalez.myapplication2frag",
+            "certificate_hash": "8ef5a4b86f5ef2bc45acc83de0e5a798df545092"
+          }
+        },
+        {
+          "client_id": "870753527987-8ajs4m4r1jqha9744jacf9slpou35v30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo8URMW3tm3PgX9qVpHdz4Sm_cMMXc4yU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870753527987-8ajs4m4r1jqha9744jacf9slpou35v30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
