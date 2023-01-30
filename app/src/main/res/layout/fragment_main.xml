@@ -10,18 +10,19 @@
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/view_escuderia"
+        android:layout_marginBottom="60dp"
         android:padding="2dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="1"/>
+        app:spanCount="1"
+        tools:listitem="@layout/view_escuderia" />
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/progress"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:indeterminate="true"
-        android:visibility="gone"
-        android:layout_gravity="center" />
+        android:visibility="gone" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -33,13 +34,21 @@
         android:clickable="true"
         android:src="@android:drawable/ic_menu_add" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/menuItemListas"
         android:layout_gravity="bottom"
-        app:menu="@menu/botton_nav_menu"
-        />
+        android:orientation="vertical"
+        android:layout_marginTop="120dp">
 
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menuItemListas"
+            android:layout_gravity="bottom"
+            app:menu="@menu/botton_nav_menu"
+            />
+    </LinearLayout>
 
 </FrameLayout>

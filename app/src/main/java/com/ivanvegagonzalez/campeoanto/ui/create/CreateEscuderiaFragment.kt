@@ -18,15 +18,15 @@ class CreateEscuderiaFragment : Fragment(R.layout.fragment_create_escuderia) {
 
         binding.buttonCrearEscuderias.setOnClickListener {
             //añadir escuderias
-            val nombre = Escuderias(binding.nombreEscuderia.text.toString())
-            /*val textoCarrera = Escuderias(binding.carreraEscuderia.text.toString())
+            val nombre = binding.nombreEscuderia.text.toString()
+            val textoCarrera = binding.carreraEscuderia.text.toString()
             val carrera=Integer.parseInt(textoCarrera.toString());
-            val pais = Escuderias(binding.paisEscuderia.text.toString())
+            val pais = binding.paisEscuderia.text.toString()
             val url = "ninguna"
 
             val escuderia= Escuderias(nombre.toString(),pais.toString(),carrera,url)
-            */
-            viewModel.createEscuderia(nombre)
+
+            viewModel.createEscuderia(escuderia)
             findNavController().navigate(
                 R.id.action_createEscuderiaFragment_to_mainFragment)
         }
