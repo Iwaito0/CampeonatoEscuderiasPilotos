@@ -49,7 +49,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         }
 
         binding.appbar.setOnClickListener{
-            viewModel.modificaTituloEscuderia()
+            viewModel.modificaEscuderia()
             findNavController().navigate(
                 R.id.action_detailFragment_to_mainFragment
             )

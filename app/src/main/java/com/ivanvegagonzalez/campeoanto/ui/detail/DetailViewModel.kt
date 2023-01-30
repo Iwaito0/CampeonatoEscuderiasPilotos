@@ -1,5 +1,6 @@
 package com.ivanvegagonzalez.campeoanto.ui.detail
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,10 +14,16 @@ class DetailViewModel(escuderia: Escuderias): ViewModel() {
         DbFirestore.borraEscuderia(escuderia.value!!)
     }
 
-    fun modificaTituloEscuderia() {
+    fun modificaEscuderia() {
         val nombre = escuderia.value?.nombre
         _escuderia.value = _escuderia.value?.copy(nombre = "$nombre modificado")
-        DbFirestore.modificaTitulo(_escuderia.value, nombre!!)
+
+        Log.d("NOMBRE", nombre!!)
+        Log.d("VALOReSCUDERIA", _escuderia.value.toString())
+        //Por aqui
+        //ModificarEscuderiaFragment.modificarEscuderia(_escuderia.value, nombre!!)
+
+        //DbFirestore.modificaEscuderiaTitulo(_escuderia.value, nombre!!)
     }
 
     private val _escuderia = MutableLiveData(escuderia)

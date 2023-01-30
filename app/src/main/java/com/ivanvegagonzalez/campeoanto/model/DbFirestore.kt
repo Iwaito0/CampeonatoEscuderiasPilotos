@@ -60,7 +60,7 @@ object DbFirestore {
             }
     }
 
-    fun modificaTitulo(escuderia: Escuderias?, title: String) {
+    fun modificaEscuderiaTitulo(escuderia: Escuderias?, title: String) {
         FirebaseFirestore.getInstance().collection(COLLECTION_ESCUDERIA)
             .whereEqualTo("titulo", title)
             .get()
