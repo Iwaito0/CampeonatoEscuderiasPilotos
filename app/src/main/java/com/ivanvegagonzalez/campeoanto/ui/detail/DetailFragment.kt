@@ -3,10 +3,12 @@ package com.ivanvegagonzalez.campeoanto.ui.detail
 import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.core.text.bold
 import androidx.core.text.buildSpannedString
 import androidx.fragment.app.Fragment
@@ -19,6 +21,7 @@ import com.ivanvegagonzalez.campeoanto.model.Escuderias
 
 
 class DetailFragment : Fragment(R.layout.fragment_detail) {
+
     private  val viewModel: DetailViewModel by viewModels {
         DetailViewModelFactory(arguments?.getParcelable<Escuderias>(EXTRA_ESCUDERIA)!!)
     }
@@ -46,13 +49,18 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
             findNavController().navigate(
                 R.id.action_detailFragment_to_mainFragment
             )
+
+
         }
 
-        binding.appbar.setOnClickListener{
-            viewModel.modificaEscuderia()
+        binding.btnModificar.setOnClickListener{
+            //viewModel.modificaEscuderia()
             findNavController().navigate(
-                R.id.action_detailFragment_to_mainFragment
+                R.id.action_detailFragment_to_modificarEscuderiaFragment,
+               //bundleOf(ModificarEscuderiaFragment.EXTRA_ESC to it)
             )
+            //viewModel.onNavigateDone()
+
         }
 
         binding.fab.setOnClickListener {

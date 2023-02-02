@@ -1,11 +1,10 @@
 package com.ivanvegagonzalez.campeoanto.ui.detail
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.ivanvegagonzalez.campeoanto.model.DbFirestore
+import com.ivanvegagonzalez.campeoanto.repository.DbFirestore
 import com.ivanvegagonzalez.campeoanto.model.Escuderias
 
 class DetailViewModel(escuderia: Escuderias): ViewModel() {
@@ -15,11 +14,9 @@ class DetailViewModel(escuderia: Escuderias): ViewModel() {
     }
 
     fun modificaEscuderia() {
-        val nombre = escuderia.value?.nombre
+       /* val nombre = escuderia.value?.nombre
         _escuderia.value = _escuderia.value?.copy(nombre = "$nombre modificado")
-
-        Log.d("NOMBRE", nombre!!)
-        Log.d("VALOReSCUDERIA", _escuderia.value.toString())
+        */
         //Por aqui
         //ModificarEscuderiaFragment.modificarEscuderia(_escuderia.value, nombre!!)
 

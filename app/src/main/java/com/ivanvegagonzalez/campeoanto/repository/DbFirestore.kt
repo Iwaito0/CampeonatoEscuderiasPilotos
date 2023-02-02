@@ -1,9 +1,10 @@
-package com.ivanvegagonzalez.campeoanto.model
+package com.ivanvegagonzalez.campeoanto.repository
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.FirebaseFirestore
+import com.ivanvegagonzalez.campeoanto.model.Escuderias
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext

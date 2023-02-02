@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_detailFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_modificarEscuderiaFragment"
+            app:destination="@id/modificarEscuderiaFragment" />
     </fragment>
     <fragment
         android:id="@+id/createEscuderiaFragment"
@@ -42,4 +45,9 @@
         android:name="com.ivanvegagonzalez.campeoanto.ui.main.PilotoFragment"
         android:label="fragment_piloto"
         tools:layout="@layout/fragment_piloto" />
+    <fragment
+        android:id="@+id/modificarEscuderiaFragment"
+        android:name="com.ivanvegagonzalez.campeoanto.ui.detail.ModificarEscuderiaFragment"
+        android:label="fragment_modificar_escuderia"
+        tools:layout="@layout/fragment_modificar_escuderia" />
 </navigation>

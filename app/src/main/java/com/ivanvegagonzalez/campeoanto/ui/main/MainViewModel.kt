@@ -1,9 +1,8 @@
 package com.ivanvegagonzalez.campeoanto.ui.main
 
 import android.annotation.SuppressLint
-import android.view.View
 import androidx.lifecycle.*
-import com.ivanvegagonzalez.campeoanto.model.DbFirestore
+import com.ivanvegagonzalez.campeoanto.repository.DbFirestore
 import com.ivanvegagonzalez.campeoanto.model.Escuderias
 import kotlinx.coroutines.*
 

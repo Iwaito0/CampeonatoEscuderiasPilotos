@@ -29,6 +29,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         viewModel.state.observe(viewLifecycleOwner){state ->
             binding.progress.visibility =  if (state.loading) VISIBLE else GONE
+
             state.escuderias?.let {
                 adapter.escuderias = state.escuderias
                 adapter.notifyDataSetChanged()
