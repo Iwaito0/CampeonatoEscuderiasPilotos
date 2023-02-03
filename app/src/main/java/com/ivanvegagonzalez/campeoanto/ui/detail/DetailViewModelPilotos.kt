@@ -7,14 +7,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.ivanvegagonzalez.campeoanto.repository.DbFirestore
 import com.ivanvegagonzalez.campeoanto.model.Escuderias
+import com.ivanvegagonzalez.campeoanto.model.Pilotos
+import com.ivanvegagonzalez.campeoanto.repository.DbFirestorePilotos
 
-class DetailViewModel(escuderia: Escuderias): ViewModel() {
+class DetailViewModelPilotos(piloto: Pilotos): ViewModel() {
 
-    fun borraEscuderia() {
-        DbFirestore.borraEscuderia(escuderia.value!!)
+    fun borraPiloto() {
+        DbFirestorePilotos.borraPiloto(piloto.value!!)
     }
 
-    fun modificaEscuderia() {
+    fun modificaPiloto() {
        /* val nombre = escuderia.value?.nombre
         Log.d("PRUEBANOMBRE",nombre.toString())
         Log.d("PRUEBAArrayEscuderia",escuderia.value.toString())*/
@@ -25,14 +27,14 @@ class DetailViewModel(escuderia: Escuderias): ViewModel() {
         //DbFirestore.modificaEscuderiaTitulo(_escuderia.value, nombre!!)
     }
 
-    private val _escuderia = MutableLiveData(escuderia)
-    val escuderia: LiveData<Escuderias> get() = _escuderia
+    private val _piloto = MutableLiveData(piloto)
+    val piloto: LiveData<Pilotos> get() = _piloto
 }
 
 @Suppress("UNCHECKED_CAST")
-class DetailViewModelFactory(private val escuderia: Escuderias): ViewModelProvider.Factory{
+class DetailViewModelFactoryPilotos(private val piloto: Pilotos): ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return DetailViewModel(escuderia) as T
+        return DetailViewModelPilotos(piloto) as T
     }
 
 }

@@ -18,15 +18,16 @@ import com.ivanvegagonzalez.campeoanto.R
 import com.ivanvegagonzalez.campeoanto.databinding.FragmentDetailBinding
 import com.ivanvegagonzalez.campeoanto.loadUrl
 import com.ivanvegagonzalez.campeoanto.model.Escuderias
+import com.ivanvegagonzalez.campeoanto.model.Pilotos
 
 
-class DetailFragment : Fragment(R.layout.fragment_detail) {
+class DetailFragmentPiloto : Fragment(R.layout.fragment_detail_piloto) {
 
-    private  val viewModel: DetailViewModel by viewModels {
-        DetailViewModelFactory(arguments?.getParcelable<Escuderias>(EXTRA_ESCUDERIA)!!)
+    private  val viewModel: DetailViewModelPilotos by viewModels {
+        DetailViewModelFactoryPilotos(arguments?.getParcelable<Pilotos>(EXTRA_PILOTO)!!)
     }
     companion object{
-        const val EXTRA_ESCUDERIA = "DetailActivity:Escuderia"
+        const val EXTRA_PILOTO = "DetailActivity:Piloto"
     }
 
     //private val viewModel: DetailViewModel by viewModels()
@@ -38,16 +39,17 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
 
-        viewModel.escuderia.observe(viewLifecycleOwner){ escuderias ->
-            (requireActivity() as AppCompatActivity).supportActionBar?.title = escuderias.nombre
-            binding.imagen.loadUrl(escuderias.urlImagen)
-            bindingDetail(binding.detalles, escuderias)
+        viewModel.piloto.observe(viewLifecycleOwner){ pilotos ->
+            (requireActivity() as AppCompatActivity).supportActionBar?.title = pilotos.nombre
+            binding.imagen.loadUrl(pilotos.urlImagen)
+            bindingDetail(binding.detalles, pilotos)
         }
 
         binding.btnBorrar.setOnClickListener {
-            viewModel.borraEscuderia()
+            viewModel.borraPiloto()
             findNavController().navigate(
-                R.id.action_detailFragment_to_mainFragment
+                //R.id.action_detailFragment_to_mainFragment
+                R.id.action_detailFragmentPiloto_to_pilotoFragment
             )
 
 
@@ -80,13 +82,17 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         }
     }
 
-    private fun bindingDetail(detalles: TextView, escuderia: Escuderias) {
+    private fun bindingDetail(detalles: TextView, piloto: Pilotos) {
         detalles.text = buildSpannedString {
-            bold { append("Pais de procedencia: ") }
-            appendLine(escuderia.paisProcedencia)
+            bold { append("Primer apellido: ") }
+            appendLine(piloto.primerApellido)
             append()
-            bold { append("Carreras ganadas: ") }
-            appendLine(escuderia.carrerasGanadas.toString())
+            bold { append("Segundo apellido: ") }
+            appendLine(piloto.segundoApellido)
+            append()
+            bold { append("DNI: ") }
+            Log.d("DNIDNI", piloto.DNI)
+            appendLine(piloto.DNI)
             append()
         }
     }

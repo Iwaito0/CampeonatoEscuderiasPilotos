@@ -44,10 +44,36 @@
         android:id="@+id/pilotoFragment"
         android:name="com.ivanvegagonzalez.campeoanto.ui.main.PilotoFragment"
         android:label="fragment_piloto"
-        tools:layout="@layout/fragment_piloto" />
+        tools:layout="@layout/fragment_piloto" >
+        <action
+            android:id="@+id/action_pilotoFragment_to_detailFragmentPiloto"
+            app:destination="@id/detailFragmentPiloto" />
+        <action
+            android:id="@+id/action_pilotoFragment_to_createPilotoFragment"
+            app:destination="@id/createPilotoFragment" />
+        <action
+            android:id="@+id/action_pilotoFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/modificarEscuderiaFragment"
         android:name="com.ivanvegagonzalez.campeoanto.ui.detail.ModificarEscuderiaFragment"
         android:label="fragment_modificar_escuderia"
         tools:layout="@layout/fragment_modificar_escuderia" />
+    <fragment
+        android:id="@+id/createPilotoFragment"
+        android:name="com.ivanvegagonzalez.campeoanto.ui.create.CreatePilotoFragment"
+        android:label="CreatePilotoFragment" >
+        <action
+            android:id="@+id/action_createPilotoFragment_to_pilotoFragment"
+            app:destination="@id/pilotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragmentPiloto"
+        android:name="com.ivanvegagonzalez.campeoanto.ui.detail.DetailFragmentPiloto"
+        android:label="DetailFragmentPiloto" >
+        <action
+            android:id="@+id/action_detailFragmentPiloto_to_pilotoFragment"
+            app:destination="@id/pilotoFragment" />
+    </fragment>
 </navigation>

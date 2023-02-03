@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.FirebaseFirestore
 import com.ivanvegagonzalez.campeoanto.model.Escuderias
+import com.ivanvegagonzalez.campeoanto.model.Pilotos
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
@@ -12,6 +13,8 @@ import kotlinx.coroutines.withContext
 
 object DbFirestore {
     const val COLLECTION_ESCUDERIA = "escuderias"
+
+    //Datos escuderias
     suspend fun getAll(): List<Escuderias> {
         val snapshot = FirebaseFirestore.getInstance().collection(COLLECTION_ESCUDERIA)
             .get()
