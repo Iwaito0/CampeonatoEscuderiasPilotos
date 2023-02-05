@@ -55,11 +55,12 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
         binding.btnModificar.setOnClickListener{
             //viewModel.modificaEscuderia()
+            //Por aqui
             val prueba="hey que tal";
-            /*findNavController().navigate(
+            findNavController().navigate(
                 R.id.action_detailFragment_to_modificarEscuderiaFragment,
-               //bundleOf(ModificarEscuderiaFragment.EXTRA_ESC to it)
-            )*/
+              // bundleOf(ModificarEscuderiaFragment.EXTRA_ESC to it)
+            )
             //viewModel.onNavigateDone()
 
         }

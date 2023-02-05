@@ -26,11 +26,13 @@ class CreatePilotoFragment : Fragment(R.layout.fragment_create_piloto) {
             val dni = binding.DNIPiloto.text.toString()
             val url = "ninguna"
 
-            val piloto= Pilotos(nombre.toString(),
-                                apellido1.toString(),
-                                apellido2.toString(),
-                                dni.toString(),
-                url)
+            val piloto= Pilotos(
+                nombre.toString(),
+                apellido1.toString(),
+                apellido2.toString(),
+                dni.toString(),
+                url
+            )
 
             viewModel.createPiloto(piloto)
             findNavController().navigate(

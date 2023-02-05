@@ -17,14 +17,14 @@ class DetailViewModelPilotos(piloto: Pilotos): ViewModel() {
     }
 
     fun modificaPiloto() {
-       /* val nombre = escuderia.value?.nombre
+       /* val nombre = piloto.value?.nombre
         Log.d("PRUEBANOMBRE",nombre.toString())
-        Log.d("PRUEBAArrayEscuderia",escuderia.value.toString())*/
+        Log.d("PRUEBAArraypiloto",piloto.value.toString())*/
 
         //Por aqui
-        //ModificarEscuderiaFragment.modificarEscuderia(_escuderia.value, nombre!!)
+        //ModificarPilotoFragment.modificarPiloto(_piloto.value, nombre!!)
 
-        //DbFirestore.modificaEscuderiaTitulo(_escuderia.value, nombre!!)
+        //DbFirestore.modificaPilotoTitulo(_piloto.value, nombre!!)
     }
 
     private val _piloto = MutableLiveData(piloto)

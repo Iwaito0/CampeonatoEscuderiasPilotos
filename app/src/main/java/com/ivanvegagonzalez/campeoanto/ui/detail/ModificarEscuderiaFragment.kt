@@ -15,6 +15,10 @@ import com.ivanvegagonzalez.campeoanto.model.Escuderias
 
 class ModificarEscuderiaFragment: Fragment(R.layout.fragment_modificar_escuderia) {
 
+   /*
+    companion object{
+        const val EXTRA_ESC= "DetailActivity:Escuderia"
+    }*/
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //Log.d("PRUEBA", savedInstanceState.toString())
