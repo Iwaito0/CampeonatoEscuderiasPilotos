@@ -91,8 +91,7 @@ class DetailFragmentPiloto : Fragment(R.layout.fragment_detail_piloto) {
             appendLine(piloto.segundoApellido)
             append()
             bold { append("DNI: ") }
-            Log.d("DNIDNI", "El DNI ES "+piloto.DNI)
-            appendLine(piloto.DNI.toString())
+            appendLine(piloto.dni.toString())
             append()
         }
     }

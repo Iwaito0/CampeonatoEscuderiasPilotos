@@ -8,7 +8,7 @@ data class Pilotos(
     val nombre: String = "",
     val primerApellido: String = "",
     val segundoApellido: String = "",
-    val DNI: String = "",
+    val dni: String = "",
     val urlImagen: String = "",
     ): Parcelable {
 }

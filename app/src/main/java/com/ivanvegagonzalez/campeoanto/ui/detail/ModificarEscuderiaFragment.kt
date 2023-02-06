@@ -15,14 +15,21 @@ import com.ivanvegagonzalez.campeoanto.model.Escuderias
 
 class ModificarEscuderiaFragment: Fragment(R.layout.fragment_modificar_escuderia) {
 
+    companion object{
+        const val ESCUDERIA_DATOS= "DetailActivity:Escuderia"
+
+    }
+
+
    /*
     companion object{
         const val EXTRA_ESC= "DetailActivity:Escuderia"
     }*/
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //Log.d("PRUEBA", savedInstanceState.toString())
-        // val binding = FragmentDetailBinding.bind(view)
+        Log.d("PRUEBA", ESCUDERIA_DATOS)
+       //Log.d("PRUEBA", prueba.toString())
+       // val binding = FragmentDetailBinding.bind(view)
         /* Log.d("PRUEBA", EXTRA_ESC)
          Log.d("PRUEBA", view.toString())
          Log.d("PRUEBA", EXTRA_ESC)*/

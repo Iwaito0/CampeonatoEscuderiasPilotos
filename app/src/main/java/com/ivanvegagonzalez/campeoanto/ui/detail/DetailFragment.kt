@@ -54,12 +54,21 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         }
 
         binding.btnModificar.setOnClickListener{
-            //viewModel.modificaEscuderia()
             //Por aqui
-            val prueba="hey que tal";
+            var nombre="";
+            var paisProcedencia="";
+            var carrerasGanadas=0;
+            var urlImagen="";
+            viewModel.escuderia.observe(viewLifecycleOwner){ escuderias ->
+                nombre=escuderias.nombre;
+                paisProcedencia=escuderias.paisProcedencia;
+                carrerasGanadas=escuderias.carrerasGanadas;
+                urlImagen=escuderias.urlImagen
+            }
+            val escu=Escuderias(nombre,paisProcedencia,carrerasGanadas,urlImagen);
             findNavController().navigate(
                 R.id.action_detailFragment_to_modificarEscuderiaFragment,
-              // bundleOf(ModificarEscuderiaFragment.EXTRA_ESC to it)
+                    bundleOf(ModificarEscuderiaFragment.ESCUDERIA_DATOS to escu)
             )
             //viewModel.onNavigateDone()
 
