@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.create.CreateEscuderiaFragment">
     <LinearLayout
-        android:id="@+id/hola2"
+        android:id="@+id/hola"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Modificar Escuderia"
+            android:text="Modificar Piloto"
             android:textColor="@color/black"
             android:textSize="32sp"
             android:textStyle="bold"
@@ -26,45 +26,53 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/frmEscuderiaModificar"
+        android:id="@+id/frmPiloto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="130dp"
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/nombreEscuderiaModificar"
+            android:id="@+id/nuevoNombrePiloto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="Nuevo nombre"
+            android:hint="nombre"
             android:padding="16dp"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/paisEscuderiaModificar"
+            android:id="@+id/nuevoPrimerApellidoPiloto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="Nuevo pais de procedencia"
+            android:hint="1º apellido"
             android:padding="16dp"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/carreraEscuderiaModificar"
+            android:id="@+id/nuevoSegundoApellidoPiloto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="Nuevo numero de carreras ganadas"
+            android:hint="2º apellido"
+            android:padding="16dp"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/nuevoDNIPiloto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="DNI"
             android:padding="16dp"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/buttonModificarEscuderias"
+            android:id="@+id/buttonModificarPiloto"
             android:layout_margin="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Modificar"
+            android:text="Aceptar"
             android:layout_gravity="center"/>
 
     </LinearLayout>

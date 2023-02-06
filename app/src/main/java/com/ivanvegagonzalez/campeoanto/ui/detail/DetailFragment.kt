@@ -3,7 +3,6 @@ package com.ivanvegagonzalez.campeoanto.ui.detail
 import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -70,8 +69,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
                 R.id.action_detailFragment_to_modificarEscuderiaFragment,
                     bundleOf(ModificarEscuderiaFragment.ESCUDERIA_DATOS to escu)
             )
-            //viewModel.onNavigateDone()
-
         }
 
         binding.fab.setOnClickListener {

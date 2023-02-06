@@ -56,13 +56,23 @@ class DetailFragmentPiloto : Fragment(R.layout.fragment_detail_piloto) {
         }
 
         binding.btnModificar.setOnClickListener{
-            //viewModel.modificaEscuderia()
-            val prueba="hey que tal";
-            /*findNavController().navigate(
-                R.id.action_detailFragment_to_modificarEscuderiaFragment,
-               //bundleOf(ModificarEscuderiaFragment.EXTRA_ESC to it)
-            )*/
-            //viewModel.onNavigateDone()
+            var nombre="";
+            var primerApellido="";
+            var segundoApellido="";
+            var dni="";
+            var urlImagen="";
+            viewModel.piloto.observe(viewLifecycleOwner){ pilotos ->
+                nombre=pilotos.nombre;
+                primerApellido=pilotos.primerApellido;
+                segundoApellido=pilotos.segundoApellido;
+                dni=pilotos.dni
+                urlImagen=pilotos.urlImagen
+            }
+            val pil = Pilotos(nombre,primerApellido,segundoApellido,dni,urlImagen)
+            findNavController().navigate(
+                R.id.action_detailFragmentPiloto_to_modificarPilotosFragments,
+                bundleOf(ModificarPilotosFragments.PILOTOS_DATOS to pil)
+            )
 
         }
 
