@@ -22,9 +22,9 @@ class CreateEscuderiaFragment : Fragment(R.layout.fragment_create_escuderia) {
             val textoCarrera = binding.carreraEscuderia.text.toString()
             val carrera=Integer.parseInt(textoCarrera.toString());
             val pais = binding.paisEscuderia.text.toString()
-            val url = "ninguna"
+            val url = binding.enlaceFotografia.text.toString()
 
-            val escuderia= Escuderias(nombre.toString(),pais.toString(),carrera,url)
+            val escuderia= Escuderias(nombre.toString(),pais.toString(),carrera,url.toString())
 
             viewModel.createEscuderia(escuderia)
             findNavController().navigate(

@@ -24,14 +24,14 @@ class CreatePilotoFragment : Fragment(R.layout.fragment_create_piloto) {
             val apellido1 = binding.primerApellidoPiloto.text.toString()
             val apellido2=binding.segundoApellidoPiloto.text.toString()
             val dni = binding.DNIPiloto.text.toString()
-            val url = "ninguna"
+            val url = binding.enlaceFotografiaPiloto.text.toString()
 
             val piloto= Pilotos(
                 nombre.toString(),
                 apellido1.toString(),
                 apellido2.toString(),
                 dni.toString(),
-                url
+                url.toString()
             )
 
             viewModel.createPiloto(piloto)

@@ -13,15 +13,8 @@ class DetailViewModel(escuderia: Escuderias): ViewModel() {
         DbFirestore.borraEscuderia(escuderia.value!!)
     }
 
-    fun modificaEscuderia() {
-       /* val nombre = escuderia.value?.nombre
-        Log.d("PRUEBANOMBRE",nombre.toString())
-        Log.d("PRUEBAArrayEscuderia",escuderia.value.toString())*/
-
-        //Por aqui
-        //ModificarEscuderiaFragment.modificarEscuderia(_escuderia.value, nombre!!)
-
-        //DbFirestore.modificaEscuderiaTitulo(_escuderia.value, nombre!!)
+    fun modificaEscuderia(escuderia: Escuderias, nombreEscuderia: String) {
+        DbFirestore.modificaEscuderia(escuderia, nombreEscuderia)
     }
 
     private val _escuderia = MutableLiveData(escuderia)

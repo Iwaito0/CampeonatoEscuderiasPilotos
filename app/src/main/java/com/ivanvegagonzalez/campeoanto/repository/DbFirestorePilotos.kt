@@ -61,16 +61,20 @@ object DbFirestorePilotos {
             }
     }
 
-    fun modificaPilotoTitulo(piloto: Pilotos?, title: String) {
+    fun modificaPiloto(piloto: Pilotos?, nombrePiloto: String) {
         FirebaseFirestore.getInstance().collection(COLLECTION_PILOTO)
-            .whereEqualTo("titulo", title)
+            .whereEqualTo("nombre", nombrePiloto)
             .get()
             .addOnCompleteListener {
                 if (it.isSuccessful){
                     val id = it.result.first().id
                     FirebaseFirestore.getInstance().collection(COLLECTION_PILOTO)
                         .document(id)
-                        .update("titulo", piloto?.nombre)
+                        .update("nombre", piloto?.nombre,
+                                "primerApellido",piloto?.primerApellido,
+                                                  "segundoApellido",piloto?.segundoApellido,
+                                                  "dni",piloto?.dni,
+                                                  "urlImagen", piloto?.urlImagen)
                         .addOnCompleteListener {
                             if (it.isSuccessful){
                                 Log.d(COLLECTION_PILOTO, id)

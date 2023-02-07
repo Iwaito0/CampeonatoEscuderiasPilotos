@@ -67,6 +67,15 @@
             android:padding="16dp"
             android:textSize="20sp" />
 
+        <EditText
+            android:id="@+id/nuevaFotografiaPiloto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Enlace de la fotografia"
+            android:padding="16dp"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/buttonModificarPiloto"
             android:layout_margin="8dp"

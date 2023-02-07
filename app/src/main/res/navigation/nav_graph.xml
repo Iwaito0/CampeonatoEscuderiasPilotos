@@ -59,7 +59,11 @@
         android:id="@+id/modificarEscuderiaFragment"
         android:name="com.ivanvegagonzalez.campeoanto.ui.detail.ModificarEscuderiaFragment"
         android:label="fragment_modificar_escuderia"
-        tools:layout="@layout/fragment_modificar_escuderia" />
+        tools:layout="@layout/fragment_modificar_escuderia" >
+        <action
+            android:id="@+id/action_modificarEscuderiaFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/createPilotoFragment"
         android:name="com.ivanvegagonzalez.campeoanto.ui.create.CreatePilotoFragment"
@@ -83,5 +87,9 @@
         android:id="@+id/modificarPilotosFragments"
         android:name="com.ivanvegagonzalez.campeoanto.ui.detail.ModificarPilotosFragments"
         android:label="fragment_modificar_pilotos_fragments"
-        tools:layout="@layout/fragment_modificar_pilotos_fragments" />
+        tools:layout="@layout/fragment_modificar_pilotos_fragments" >
+        <action
+            android:id="@+id/action_modificarPilotosFragments_to_pilotoFragment"
+            app:destination="@id/pilotoFragment" />
+    </fragment>
 </navigation>
