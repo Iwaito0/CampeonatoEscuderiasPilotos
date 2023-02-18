@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/menuItemListas"
             android:layout_gravity="bottom"
-            app:menu="@menu/botton_nav_menu"
+            app:menu="@menu/botton_nav_menu2"
 
             />
     </LinearLayout>
